@@ -19,14 +19,19 @@ export const search = (req, res) => {
     res.render("search", { pageTitle: "Search", searchingBy: searchingBy, videos });
 };
 
-
 export const getUpload = (req, res) => res.render("upload", { pageTitle: "upload" });
-export const postUpload = (req, res) => {
+export const postUpload = async(req, res) => {
     const {
-        body: { file, title, descreption }
+        body: { title, description},
+        file: { path }
     } = req;
-    // To Do : Unplad and Save Videos
-    res.redirect(routes.videoDetail(324393));
+    const newVideo = await Video.create({
+        fileUrl: path,
+        title: title,
+        description: description
+    });
+    console.log(newVideo);
+    res.redirect(routes.videoDetail(newVideo.id));
 } 
 
 export const videoDetail = (req, res) => res.render("videoDetail", { pageTitle: "video Detail" });
