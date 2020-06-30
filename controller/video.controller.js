@@ -47,7 +47,33 @@ export const videoDetail = async(req, res) => {
     }
 };
 
-export const editVideo = (req, res) => res.render("videoEdit", { pageTitle: "video Edit" });
+
+export const getEditVideo = async(req, res) => {
+    const {
+        params: {id}
+    } = req;
+    try {
+        // id값이 있다면 
+        const video = await Video.findById(id);
+        res.render("editVideo", { pageTitle: `Edit ${video.title}`, video })
+    } catch (error) {
+        // id 값이 존재하지 않는다면,
+        res.redirect(routes.home);
+    }
+};
+
+export const postEditVideo = async(req, res) => {
+    const {
+        params: { id },
+        body: { title, description }
+    } = req;
+    try {
+        await Video.findOneAndUpdate({ _id: id }, { title, description });
+        res.redirect(routes.videoDetail(id));
+    } catch (error) {
+        res.redirect(routes.home);
+    }
+};
 
 export const deleteVideo = (req, res) => res.render("videoDelete", { pageTitle: "video Delete" });
 

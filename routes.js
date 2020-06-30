@@ -38,14 +38,22 @@ const routes = {
   changePassword: CHANGE_PASSWORD,
   videos: VIDEOS,
   upload: UPLOAD,
-  videoDetail: (id) => {
+  videoDetail: id => {
     if (id) {
       return `/videos/${id}`;
     } else {
       return VIDEO_DETAIL;
     }
   },
-  editVideo: EDIT_VIDEO,
+  editVideo: id => {
+    if (id) {
+      // id가 존재하다면 다음과 같은 URL로 이동하고,
+      return `/videos/${id}/edit`;
+    } else {
+      // id가 존재하지 않다면 EDIT_VIDEO로 이동하라
+      return EDIT_VIDEO;
+    }
+  },
   deleteVideo: DELETE_VIDEO
 };
 
