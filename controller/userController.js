@@ -1,39 +1,39 @@
-import routes from "../routes"
+import routes from "../routes";
 
 export const getJoin = (req, res) => {
-    res.render("join", { pageTitle: "Join" });
-
+  res.render("join", { pageTitle: "Join" });
 };
 
 export const postJoin = (req, res) => {
-    const {
-        body: { name, email, password, password2 }
-    } = req;
-    if (password !== password2) {
-        // possword가 일치하지 않을 때
-        res.status(400);
-        res.render("join", { pageTitle: "Join"});
-    } else {
-        // To do : Resigter User
-        // Td do : Log User in 
-        res.redirect(routes.home);
-    }
+  const {
+    body: { name, email, password, password2 },
+  } = req;
+  if (password !== password2) {
+    // possword가 일치하지 않을 때
+    res.status(400);
+    res.render("join", { pageTitle: "Join" });
+  } else {
+    // To do : Resigter User
+    // Td do : Log User in
+    res.redirect(routes.home);
+  }
 };
 
 export const getLogin = (req, res) => {
-    res.render("login", { pageTitle: "Login" });  
+  res.render("login", { pageTitle: "Login" });
 };
 export const postLogin = (req, res) => {
-    res.redirect(routes.home);
+  res.redirect(routes.home);
 };
 
-
 export const logout = (req, res) => {
-    // To Do : 로그아웃 처리하기 
-    res.redirect(routes.home);
-}
+  // To Do : 로그아웃 처리하기
+  res.redirect(routes.home);
+};
 
-export const userDetail = (req, res) => res.render("userDetail", { pageTitle: "User Detail" });
-export const editProfile = (req, res) => res.render("editProfile", { pageTitle: "Edit Profile" });
-export const changePassword = (req, res) => res.render("changePassword", { pageTitle: "Change Password" });
-
+export const userDetail = (req, res) =>
+  res.render("userDetail", { pageTitle: "User Detail" });
+export const editProfile = (req, res) =>
+  res.render("editProfile", { pageTitle: "Edit Profile" });
+export const changePassword = (req, res) =>
+  res.render("changePassword", { pageTitle: "Change Password" });
