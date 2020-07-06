@@ -146,14 +146,49 @@ body {
 body {
   background-color: #f5f5f5;
   color: #444444;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 14px; }
 
 main {
   width: 100%;
-  max-width: 1400px;
+  max-width: 1200px;
   margin: 0 auto;
   min-height: 70vh; }
+
+button,
+input,
+textarea,
+.fileUpload {
+  padding: 7px 10px;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  color: #444444;
+  font-weight: 300;
+  background-color: white;
+  max-width: 320px;
+  resize: none;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); }
+  button::placeholder,
+  input::placeholder,
+  textarea::placeholder,
+  .fileUpload::placeholder {
+    font-weight: 300;
+    color: rgba(0, 0, 0, 0.7); }
+
+button {
+  border: none;
+  background-color: #2560cd;
+  color: white; }
+
+button.delete {
+  background-color: #bb2f2a;
+  padding: 10px 0; }
+
+button,
+input[type="submit"] {
+  cursor: pointer; }
 
 .header {
   background-color: #ea232c;
@@ -221,18 +256,25 @@ main {
   .form-container form {
     width: 100%;
     max-width: 320px;
-    margin-bottom: 50px; }
+    margin-bottom: 25px; }
     .form-container form input {
       display: block;
       width: 100%;
-      padding-top: 10px;
-      padding-bottom: 10px;
+      padding: 10px 0 10px 10px;
       box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); }
       .form-container form input:not(:last-child) {
-        margin-bottom: 15px; }
+        margin-bottom: 20px;
+        background: whtie; }
+    .form-container form textarea {
+      margin-bottom: 25px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); }
     .form-container form input[type="submit"] {
-      background: #0097e6;
-      color: white; }
+      background: #2560cd;
+      color: white;
+      padding-left: 0; }
+  .form-container a {
+    max-width: 320px;
+    width: 100%; }
 
 .social-login {
   display: flex;
@@ -260,3 +302,46 @@ i {
   .social-login .social-login--facebook {
     background-color: #3a5998;
     color: white; }
+
+.videoBlock video {
+  max-width: 100%;
+  margin-bottom: 10px; }
+
+.videoBlock .videoBlock__title {
+  font-size: 18px;
+  font-weight: 300;
+  margin-bottom: 10px; }
+
+.home-videos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-gap: 25px; }
+
+.video-detail__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .video-detail__container .video__info {
+    width: 100%;
+    max-width: 850px;
+    margin-top: 25px; }
+    .video-detail__container .video__info button {
+      width: 100px;
+      margin-bottom: 25px;
+      box-shadow: none; }
+    .video-detail__container .video__info .video__title,
+    .video-detail__container .video__info .video__views,
+    .video-detail__container .video__info .video__description {
+      display: block;
+      margin-bottom: 15px; }
+    .video-detail__container .video__info .video__title {
+      font-size: 28px;
+      font-weight: 300; }
+    .video-detail__container .video__info .video__views {
+      font-size: 14px; }
+    .video-detail__container .video__info .video__description {
+      font-size: 16px; }
+  .video-detail__container .video__comments {
+    margin-top: 25px; }
+    .video-detail__container .video__comments .video__comment-number {
+      font-size: 18px; }
