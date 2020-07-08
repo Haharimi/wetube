@@ -1,0 +1,16 @@
+.user-profile {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .user-prifile__header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 20px;
+        .profile__username {
+            font-size: 18px;
+            margin-top: 15px;
+        }
+    }
+}

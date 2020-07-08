@@ -139,6 +139,11 @@ input {
 button {
   border: 0; }
 
+.u-avatar {
+  height: 100px;
+  background: #ea232c;
+  border-radius: 50%; }
+
 html,
 body {
   height: 100%; }
@@ -347,3 +352,17 @@ i {
     margin-top: 25px; }
     .video-detail__container .video__comments .video__comment-number {
       font-size: 18px; }
+
+.user-profile {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .user-profile .user-prifile__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px; }
+    .user-profile .user-prifile__header .profile__username {
+      font-size: 18px;
+      margin-top: 15px; }
