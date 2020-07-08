@@ -104,7 +104,6 @@ export const logout = (req, res) => {
 export const getMe = (req, res) => {
   res.render("userDetail", { pageTitle: "User Detail", user: req.user });
   const user = req.user;
-  console.log(user.name);
 };
 
 export const userDetail = async (req, res) => {
@@ -112,7 +111,8 @@ export const userDetail = async (req, res) => {
     params: { id },
   } = req;
   try {
-    const user = await User.findById(id);
+    const user = await (await User.findById(id)).populated("videos");
+    console.log(user);
     res.render("userDetail", { pageTitle: "User Detail", user });
   } catch (error) {
     res.redirect(routes.home);

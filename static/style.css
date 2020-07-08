@@ -336,6 +336,8 @@ i {
       width: 100px;
       margin-bottom: 25px;
       box-shadow: none; }
+    .video-detail__container .video__info .video_author a {
+      color: #2560cd; }
     .video-detail__container .video__info .video__title,
     .video-detail__container .video__info .video__views,
     .video-detail__container .video__info .video__description {
