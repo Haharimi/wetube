@@ -1,7 +1,7 @@
 import express from "express";
 import passport from "passport";
 import routes from "../routes";
-import { home, search } from "../controller/video.controller";
+import { home, search } from "../controller/videoController";
 import {
   getLogin,
   logout,

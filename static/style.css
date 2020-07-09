@@ -316,7 +316,7 @@ i {
 
 .videoBlock .videoBlock__title {
   font-size: 18px;
-  font-weight: 300;
+  font-weight: 500;
   margin-bottom: 10px; }
 
 .home-videos {
@@ -345,7 +345,7 @@ i {
       margin-bottom: 15px; }
     .video-detail__container .video__info .video__title {
       font-size: 28px;
-      font-weight: 300; }
+      font-weight: 600; }
     .video-detail__container .video__info .video__views {
       font-size: 14px; }
     .video-detail__container .video__info .video__description {
