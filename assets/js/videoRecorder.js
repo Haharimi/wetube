@@ -8,8 +8,8 @@ let videoRecorder;
 const handleVideoDate = (event) => {
   const { data: videoFile } = event;
   const link = document.createElement("a");
-  link.href = URL.createObjectURL(videoFile);
-  link.download = "recorded.webm";
+  link.href = URL.createObjectURL(videoFile); // 링크생성
+  link.download = "recorded.webm"; // 파일명 webm으로 다운로드
   document.body.appendChild(link);
   link.click();
 };
