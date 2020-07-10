@@ -1,0 +1,14 @@
+.record-container {
+    width: 100%;
+    max-width: 320px;
+    margin-bottom: 30px;
+    video {
+        background: $black;
+        width: 100%;
+        margin-bottom: 15px;
+    }
+    button {
+        padding: 10px 0;
+        background: $red;
+    }
+}

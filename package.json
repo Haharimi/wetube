@@ -8,9 +8,11 @@
   "dependencies": {
     "@babel/core": "^7.10.2",
     "@babel/node": "^7.10.1",
+    "@babel/polyfill": "^7.10.4",
     "@babel/preset-env": "^7.10.2",
     "autoprefixer": "^9.8.4",
     "babel-loader": "^8.1.0",
+    "babel-polyfill": "^6.26.0",
     "body-parser": "^1.19.0",
     "connect-mongo": "^3.2.0",
     "cookie-parser": "^1.4.5",
@@ -20,6 +22,7 @@
     "express-session": "^1.17.1",
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "helmet": "^3.23.1",
+    "localtunnel": "^2.0.0",
     "mongoose": "^5.9.20",
     "morgan": "^1.10.0",
     "multer": "^1.4.2",
@@ -33,8 +36,7 @@
     "pug": "^3.0.0",
     "sass-loader": "^9.0.0",
     "webpack": "^4.43.0",
-    "webpack-cli": "^3.3.12",
-    "localtunnel": "^2.0.0"
+    "webpack-cli": "^3.3.12"
   },
   "scripts": {
     "dev:server": "nodemon --exec babel-node init.js --delay 2 --ignore 'scss' ",

@@ -374,6 +374,18 @@ i {
       font-size: 20px;
       cursor: pointer; }
 
+.record-container {
+  width: 100%;
+  max-width: 320px;
+  margin-bottom: 30px; }
+  .record-container video {
+    background: #444444;
+    width: 100%;
+    margin-bottom: 15px; }
+  .record-container button {
+    padding: 10px 0;
+    background: #ea232c; }
+
 .home-videos {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
